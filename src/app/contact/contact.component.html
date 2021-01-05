@@ -1,0 +1,34 @@
+<app-header></app-header>
+<main>
+    <div class="inner">
+        <div class="col-left">
+            Information
+        </div>
+        <div class="contact">
+            <h2>Kontakt</h2>
+            <div class="columns1">
+                <img src="./assets/img/me-sm.png" class="col-left" alt="" />
+                <div class="col-right">
+                    <h3>Loukas Anastasiou</h3>
+                    <p>
+                        UX / UI Designer &amp; Software Engineer<br />
+                        <img src="./assets/img/email.svg" alt="" />loukas@anastasiou.io
+                        <br />
+                        <img src="./assets/img/phone.svg" alt="" />+49 (0) 151 1963 10 16
+                    </p>
+                </div>
+            </div>
+            <form class="frm-contact" (ngSubmit)="submitForm()" ngNativeValidate>
+                <input name="was" [(ngModel)]="was" class="txt-was" type="text" placeholder="Was kann ich für Sie tun?" />
+                <input name="name" [(ngModel)]="name" class="txt-name" type="text" placeholder="Vor- und Nachname *" required />
+                <input name="company" [(ngModel)]="company" class="txt-company" type="text" placeholder="Unternehmen / Organisation"  />
+                <input name="email" [(ngModel)]="email" class="txt-email" type="email" placeholder="Email Adresse *" required />
+                <input name="tele" [(ngModel)]="tele" class="txt-tele" type="text" placeholder="Telefon-Nr." />
+                <textarea name="msg" [(ngModel)]="msg" class="txt-msg" placeholder="Erzählen Sie von Ihrem Projekt *" required></textarea>
+                <button type="submit" class="btn">Senden</button>
+            </form>
+        </div>
+    </div>
+</main>
+<div class="confirm">Nachricht gesendet!</div>
+<app-footer></app-footer>

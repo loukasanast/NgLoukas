@@ -1,1 +1,788 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Porsche;
+    src: url(./assets/fonts/911porschav3.ttf) format("truetype"), url(./assets/fonts/911Porscha.woff) format("woff"), url(./assets/fonts/911porschav3.eot?#iefix) format("embeded-opentype"); }
+  @font-face {
+    font-family: Porsche3d;
+    src: url(./assets/fonts/911porschav33d.ttf) format("truetype"), url(./assets/fonts/911Porscha3D.woff) format("woff"), url(./assets/fonts/911porschav33d.eot?#iefix) format("embeded-opentype"); }
+  @font-face {
+    font-family: Regular;
+    src: url(./assets/fonts/NHaasGroteskDSPro-55Rg.ttf) format("truetype"), url(./assets/fonts/NHaasGroteskDSPro-55Rg.woff) format("woff"), url(./assets/fonts/NHaasGroteskDSPro-55Rg.eot?#iefix) format("embeded-opentype"); }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+  
+  body {
+    font-size: 16px;
+    font-family: Regular;
+    background: #cbff0f;
+    overflow-x: hidden; }
+    body a {
+      color: inherit;
+      text-decoration: none;
+      border: none; }
+    body h1, body h2, body h3, body h4, body h5, body h6 {
+      font-weight: normal; }
+    body .inner {
+      width: 1350px;
+      margin: 0 auto; }
+    body header {
+      padding: 66px 0 0 0;
+      overflow: hidden; }
+      body header nav {
+        float: right;
+        padding: 9px 0 0 0; }
+        body header nav li {
+          display: inline;
+          margin: 0 0 0 30px;
+          line-height: 16px; }
+      body header .logo {
+        height: 54px; }
+    body main {
+      display: block;
+      padding: 87px 0 0 0; }
+      body main .col-left {
+        width: 150px;
+        padding: 67px 0 0 0;
+        float: left;
+        font-size: 24px; }
+        body main .col-left .scroll-text {
+          height: 20px;
+          margin: 430px 0 0 0;
+          font-size: 16px;
+          line-height: 20px;
+          overflow: hidden; }
+          body main .col-left .scroll-text ul {
+            list-style: none;
+            animation-name: weiter-scrollen;
+            animation-duration: .6s;
+            animation-iteration-count: infinite; }
+      body main h1 {
+        display: table-cell;
+        position: relative;
+        font-size: 130px;
+        font-family: Porsche3d;
+        line-height: 110px;
+        overflow: visible; }
+        body main h1 .smiley {
+          position: absolute;
+          top: -30px;
+          right: -30px;
+          z-index: -1;
+          animation-name: smiley;
+          animation-duration: 1.2s;
+          animation-iteration-count: infinite; }
+      body main h2 {
+        font-size: 111px;
+        font-family: Porsche;
+        line-height: 111px;
+        white-space: nowrap; }
+      body main .arrow-down {
+        margin: 89px 0 0 0;
+        position: relative;
+        animation-name: arrow;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite; }
+      body main .copy {
+        float: right;
+        margin: 194px 0 0 0; }
+      body main .projects {
+        padding: 284px 0 0 150px;
+        font-size: 36px; }
+        body main .projects .project {
+          padding: 0 0 70px 0; }
+          body main .projects .project a {
+            display: block;
+            height: 111px;
+            position: relative;
+            overflow-x: visible; }
+            body main .projects .project a h2 {
+              position: absolute;
+              top: 0;
+              left: 0;
+              transition: all .5s ease;
+              overflow-x: visible; }
+              body main .projects .project a h2:hover {
+                text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+                color: #cbff0f;
+                left: -150px; }
+          body main .projects .project .sub {
+            padding: 18px 0 0 0;
+            opacity: .7; }
+            body main .projects .project .sub .year {
+              float: right; }
+          body main .projects .project:first-child h2::before {
+            content: '01';
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: -45px;
+            font-size: 24px;
+            font-family: Regular;
+            line-height: 24px;
+            color: #000 !important;
+            text-shadow: none !important; }
+          body main .projects .project:nth-child(2) h2::before {
+            content: '02';
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: -45px;
+            font-size: 24px;
+            font-family: Regular;
+            line-height: 24px;
+            color: #000 !important;
+            text-shadow: none !important; }
+          body main .projects .project:nth-child(3) h2::before {
+            content: '03';
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: -45px;
+            font-size: 24px;
+            font-family: Regular;
+            line-height: 24px;
+            color: #000 !important;
+            text-shadow: none !important; }
+          body main .projects .project:last-child h2::before {
+            content: '04';
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: -45px;
+            font-size: 24px;
+            font-family: Regular;
+            line-height: 24px;
+            color: #000 !important;
+            text-shadow: none !important; }
+      body main .about {
+        display: table-cell;
+        position: relative;
+        left: 0;
+        padding: 20px 150px 0 0;
+        font-size: 80px;
+        line-height: 110px;
+        overflow: visible; }
+        body main .about p {
+          font-family: Porsche; }
+        body main .about .contactme {
+          border-bottom: 2px solid #000; }
+        body main .about .me {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1; }
+        body main .about .smiley {
+          display: block;
+          margin: 60px auto 0;
+          animation-name: smiley;
+          animation-duration: 1.2s;
+          animation-iteration-count: infinite; }
+      body main .contact {
+        display: table-cell;
+        width: 1200px;
+        padding: 9px 0 0 0; }
+        body main .contact h3 {
+          font-size: 30px;
+          font-family: Porsche;
+          line-height: 42px; }
+        body main .contact p {
+          font-size: 24px;
+          line-height: 36px; }
+          body main .contact p img {
+            display: block;
+            float: left;
+            width: 21px;
+            margin: 8px 12px 0 0; }
+        body main .contact .columns1 {
+          width: 650px;
+          padding: 81px 0 0 0;
+          margin: 0 auto;
+          overflow: hidden; }
+          body main .contact .columns1 .col-left {
+            float: left;
+            padding: 0;
+            margin: 0 24px 0 0; }
+        body main .contact form {
+          display: block;
+          width: 80%;
+          overflow: hidden;
+          padding: 93px 0 90px 0;
+          margin: 0 auto; }
+        body main .contact input {
+          display: block;
+          width: calc(50% - 12px);
+          height: 48px;
+          float: left;
+          margin-bottom: 40px !important;
+          font-size: 16px;
+          font-family: Regular;
+          color: #000;
+          border: none;
+          border-bottom: 2px solid #000;
+          border-radius: 0 !important;
+          background: transparent;
+          outline: none; }
+        body main .contact input:first-child {
+          width: 100%;
+          float: none;
+          font-size: 16px; }
+        body main .contact input:nth-child(2n+2) {
+          margin: 0 24px 0 0; }
+        body main .contact textarea {
+          display: block;
+          width: 100%;
+          height: 240px;
+          margin: 0 0 54px 0;
+          font-size: 16px;
+          font-family: Regular;
+          color: #000;
+          border: none;
+          border-bottom: 2px solid #000;
+          border-radius: 0 !important;
+          background: transparent;
+          outline: none;
+          resize: none; }
+        body main .contact button {
+          width: 180px;
+          height: 90px;
+          font-size: 24px;
+          font-family: Regular;
+          color: #fff;
+          border: none;
+          background: #000;
+          outline: none; }
+      body main .awards {
+        padding: 120px 0 0 150px; }
+      body main table {
+        width: calc(100% - 150px);
+        margin: 30px 0 90px 150px;
+        border-collapse: collapse; }
+        body main table tr {
+          height: 90px;
+          border-bottom: 2px solid #000; }
+          body main table tr th {
+            font-size: 16px;
+            font-weight: normal;
+            text-align: left; }
+          body main table tr td {
+            font-size: 24px; }
+    body footer {
+      padding: 77px 0 115px 0; }
+      body footer a {
+        display: inline-block;
+        margin: 0 0 19px 150px;
+        font-size: 60px;
+        border-bottom: 2px solid #000; }
+      body footer .arrow-up {
+        float: right;
+        margin: 27px 0 0 0;
+        position: relative;
+        animation-name: arrow;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite; }
+    body .proj1 {
+      display: none;
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      position: absolute;
+      z-index: -1;
+      background-image: url(./assets/img/beewaxx-app.png);
+      background-size: cover;
+      background-position: top center;
+      animation-name: back;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      opacity: .6; }
+    body .proj2 {
+      display: none;
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      position: absolute;
+      z-index: -1;
+      background-image: url(./assets/img/idm.png);
+      background-size: cover;
+      background-position: top center;
+      animation-name: back;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      opacity: .6; }
+    body .proj3 {
+      display: none;
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      position: absolute;
+      z-index: -1;
+      background-image: url(./assets/img/arabesque.png);
+      background-size: cover;
+      background-position: top center;
+      animation-name: back;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      opacity: .6; }
+    body .proj4 {
+      display: none;
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      position: absolute;
+      z-index: -1;
+      background-image: url(./assets/img/ironheadv2.png);
+      background-size: cover;
+      background-position: top center;
+      animation-name: back;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      opacity: .6; }
+    body .confirm {
+        z-index:100;
+      width: 100%;
+      height: 60px;
+      padding: 0 0 0 18px;
+      position: fixed;
+      bottom: -60px;
+      left: 0;
+      line-height: 60px;
+      color: #fff;
+      background: #000;
+      transition:all .3s ease; }
+  
+  @media screen and (min-width: 1281px) and (max-width: 1366px) {
+    .inner {
+      width: 1280px !important; }
+      .inner .contact {
+        width: 1280px !important; } }
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .inner {
+      width: 1024px !important; }
+      .inner .contact {
+        width: 1024px !important; }
+        .inner .contact .col-left {
+          display: block !important; }
+  
+    .col-left {
+      display: none !important; }
+  
+    .projects {
+      padding-left: 50px !important; }
+  
+    footer a {
+      margin-left: 50px !important; } }
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 13px !important;
+      font-family: Regular;
+      background: #cbff0f;
+      overflow-x: hidden; }
+      body a {
+        color: inherit;
+        text-decoration: none;
+        border: none; }
+      body h1, body h2, body h3, body h4, body h5, body h6 {
+        font-weight: normal; }
+      body .inner {
+        width: 90% !important;
+        margin: 0 auto !important; }
+      body header {
+        padding: 66px 0 0 0;
+        overflow: hidden; }
+        body header nav {
+          float: none !important;
+          margin: 0 auto !important;
+          padding: 19px 0 0 0 !important; }
+          body header nav ul {
+            text-align: center !important; }
+          body header nav li {
+            display: inline;
+            margin: 0 0 0 10px !important;
+            line-height: 16px; }
+        body header .logo {
+          display: block !important;
+          margin: 0 auto !important; }
+      body main {
+        display: block;
+        padding: 87px 0 0 0; }
+        body main .col-left {
+          display: none !important;
+          width: 150px;
+          padding: 67px 0 0 0;
+          float: left;
+          font-size: 24px; }
+          body main .col-left .scroll-text {
+            height: 20px;
+            margin: 430px 0 0 0;
+            font-size: 16px;
+            line-height: 20px;
+            overflow: hidden; }
+            body main .col-left .scroll-text ul {
+              list-style: none;
+              animation-name: weiter-scrollen;
+              animation-duration: .6s;
+              animation-iteration-count: infinite; }
+        body main h1 {
+          display: block !important;
+          position: relative;
+          font-size: 36px !important;
+          font-family: Porsche3d;
+          line-height: 50px !important;
+          overflow: visible; }
+          body main h1 .smiley {
+            width: 100px !important;
+            position: absolute;
+            top: 0 !important;
+            right: 0 !important;
+            z-index: -1;
+            animation-name: smiley;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite; }
+        body main h2 {
+          font-size: 48px !important;
+          font-family: Porsche;
+          line-height: 48px !important;
+          white-space: nowrap; }
+        body main .arrow-down {
+          height: 60px !important;
+          margin: 60px 0 0 0 !important;
+          position: relative;
+          animation-name: arrow;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite; }
+        body main .copy {
+          float: right;
+          margin: 164px 0 0 0 !important; }
+        body main .projects {
+          padding: 284px 0 0 0 !important;
+          font-size: 16px !important; }
+          body main .projects .project {
+            padding: 0 0 70px 0; }
+            body main .projects .project a {
+              display: block;
+              height: 48px !important;
+              position: relative;
+              overflow: hidden !important; }
+              body main .projects .project a h2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all .5s ease;
+                overflow-x: visible; }
+                body main .projects .project a h2:hover {
+                  text-shadow: 1px 0 0 #000, 0 1px 0 #000, 1px 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000, -1px -1px 0 #000;
+                  color: #cbff0f;
+                  left: -150px; }
+            body main .projects .project .sub {
+              padding: 18px 0 0 0;
+              opacity: .7; }
+              body main .projects .project .sub .year {
+                float: right; }
+            body main .projects .project:first-child h2::before {
+              content: '01';
+              display: block;
+              position: absolute;
+              top: 26px;
+              left: -45px;
+              font-size: 24px;
+              font-family: Regular;
+              line-height: 24px;
+              color: #000 !important;
+              text-shadow: none !important; }
+            body main .projects .project:nth-child(2) h2::before {
+              content: '02';
+              display: block;
+              position: absolute;
+              top: 26px;
+              left: -45px;
+              font-size: 24px;
+              font-family: Regular;
+              line-height: 24px;
+              color: #000 !important;
+              text-shadow: none !important; }
+            body main .projects .project:nth-child(3) h2::before {
+              content: '03';
+              display: block;
+              position: absolute;
+              top: 26px;
+              left: -45px;
+              font-size: 24px;
+              font-family: Regular;
+              line-height: 24px;
+              color: #000 !important;
+              text-shadow: none !important; }
+            body main .projects .project:last-child h2::before {
+              content: '04';
+              display: block;
+              position: absolute;
+              top: 26px;
+              left: -45px;
+              font-size: 24px;
+              font-family: Regular;
+              line-height: 24px;
+              color: #000 !important;
+              text-shadow: none !important; }
+        body main .about {
+          display: block !important;
+          position: relative;
+          left: 0;
+          padding: 20px 0 0 0 !important;
+          font-size: 24px !important;
+          line-height: 48px !important;
+          overflow: visible; }
+          body main .about p {
+            font-family: Porsche; }
+          body main .about .contactme {
+            border-bottom: 2px solid #000; }
+          body main .about .me {
+            width: 240px !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1; }
+          body main .about .smiley {
+            width: 100px !important;
+            display: block;
+            margin: 60px auto 0;
+            animation-name: smiley;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite; }
+        body main .contact {
+          display: block !important;
+          width: 100% !important;
+          padding: 9px 0 0 0; }
+          body main .contact h3 {
+            font-size: 18px !important;
+            font-family: Porsche;
+            line-height: 42px;
+            text-align: center !important; }
+          body main .contact p {
+            font-size: 16px !important;
+            line-height: 24px !important;
+            text-align: center !important; }
+            body main .contact p img {
+              display: inline-block !important;
+              position: relative !important;
+              top: 5px !important;
+              float: none !important;
+              width: 18px !important;
+              margin: 0 12px 0 0 !important; }
+          body main .contact .columns1 {
+            width: 100% !important;
+            padding: 80px 0 0 0;
+            margin: 0 auto;
+            overflow: hidden; }
+            body main .contact .columns1 .col-left {
+              display: block !important;
+              float: none !important;
+              padding: 0;
+              margin: 0 auto 15px auto !important; }
+          body main .contact form {
+            display: block;
+            width: 100% !important;
+            overflow: hidden;
+            padding: 94px 0 90px 0;
+            margin: 0 auto; }
+          body main .contact input {
+            display: block;
+            width: 100% !important;
+            height: 48px;
+            float: none !important;
+            margin-bottom: 40px !important;
+            font-size: 16px;
+            font-family: Regular;
+            color: #000;
+            border: none;
+            border-bottom: 2px solid #000;
+            border-radius: 0 !important;
+            background: transparent;
+            outline: none; }
+          body main .contact input:first-child {
+            width: 100%;
+            float: none;
+            font-size: 16px; }
+          body main .contact input:nth-child(2n+2) {
+            margin: 0 24px 0 0; }
+          body main .contact textarea {
+            display: block;
+            width: 100%;
+            height: 240px;
+            margin: 0 0 54px 0;
+            font-size: 16px;
+            font-family: Regular;
+            color: #000;
+            border: none;
+            border-bottom: 2px solid #000;
+            border-radius: 0 !important;
+            background: transparent;
+            outline: none;
+            resize: none; }
+          body main .contact button {
+            width: 180px;
+            height: 90px;
+            font-size: 24px;
+            font-family: Regular;
+            color: #fff;
+            border: none;
+            background: #000;
+            outline: none; }
+        body main .awards {
+          padding: 120px 0 0 0 !important; }
+        body main table {
+          width: 100% !important;
+          margin: 30px 0 90px 0 !important;
+          border-collapse: collapse; }
+          body main table tr {
+            height: 60px !important;
+            border-bottom: 2px solid #000; }
+            body main table tr th {
+              font-size: 13px !important;
+              font-weight: normal;
+              text-align: left; }
+            body main table tr td {
+              font-size: 13px !important; }
+      body footer {
+        padding: 77px 0 0 0 !important; }
+        body footer a {
+          display: inline-block;
+          margin: 0 0 19px 0 !important;
+          font-size: 24px !important;
+          border-bottom: 2px solid #000; }
+        body footer .arrow-up {
+          display: none !important;
+          height: 60px !important;
+          float: right;
+          margin: 27px 0 0 0;
+          position: relative;
+          animation-name: arrow;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite; }
+      body .proj1 {
+        display: none;
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        position: absolute;
+        z-index: -1;
+        background-image: url(./assets/img/beewaxx-app.png);
+        background-size: cover;
+        background-position: top center;
+        animation-name: back;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        opacity: .6; }
+      body .proj2 {
+        display: none;
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        position: absolute;
+        z-index: -1;
+        background-image: url(./assets/img/idm.png);
+        background-size: cover;
+        background-position: top center;
+        animation-name: back;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        opacity: .6; }
+      body .proj3 {
+        display: none;
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        position: absolute;
+        z-index: -1;
+        background-image: url(./assets/img/arabesque.png);
+        background-size: cover;
+        background-position: top center;
+        animation-name: back;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        opacity: .6; }
+      body .proj4 {
+        display: none;
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        position: absolute;
+        z-index: -1;
+        background-image: url(./assets/img/ironheadv2.png);
+        background-size: cover;
+        background-position: top center;
+        animation-name: back;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        opacity: .6; } }
+
+        .confirm-anim{
+            animation-name:confirm;
+            animation-duration:6s;
+            animation-fill-mode:forwards;
+            animation-iteration-count:1;
+        }
+
+        @keyframes confirm{
+            0%{
+                bottom:-60px;
+            }
+            10%{
+                bottom:0;
+            }
+            90%{
+                bottom:0;
+            }
+            100%{
+                bottom:-60px;
+            }
+        }
+
+  @keyframes arrow {
+    0% {
+      top: 0; }
+    50% {
+      top: 60px; }
+    100% {
+      top: 0; } }
+  @keyframes back {
+    0% {
+      background-position: top center; }
+    50% {
+      background-position: bottom center; }
+    80% {
+      background-position: top center; }
+    100% {
+      background-position: top center; } }
+  @keyframes weiter-scrollen {
+    0% {
+      margin-top: 0; }
+    100% {
+      margin-top: -20px; } }
+  @keyframes smiley {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+  ::selection {
+    color: #cbff0f;
+    background: black; }
+  
+  ::-moz-selection {
+    color: #cbff0f;
+    background: black; }
+  
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #000; }
+  
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #000;
+    opacity: 1; }
+  
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #000; }
+
+    input.ng-pristine.ng-invalid {-webkit-box-shadow: none;-ms-box-shadow: none;box-shadow:none;}textarea.ng-pristine.ng-invalid {-webkit-box-shadow: none;-ms-box-shadow: none;box-shadow:none;}
+  
+  /*# sourceMappingURL=style.css.map */

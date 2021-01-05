@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75213723-12"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-75213723-12');
+    </script>
   <meta charset="utf-8">
-  <title>NgLoukas</title>
+  <title>Loukas Anastasiou | Software Engineer & UX Designer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/js/dist/kursor.css">
+  <script src="./assets/js/dist/kursor.js"></script>
+  <script>
+    var kursorx = new kursor({
+        type: 4,
+        removeDefaultCursor: true
+    });
+    (function(){
+        $(document).mousemove(function(e){
+            $('.proj1').css('top', e.pageY - 250 + 'px');
+            $('.proj1').css('left', e.pageX - 250 + 'px');
+        });
+        $(document).mousemove(function(e){
+            $('.proj2').css('top', e.pageY - 250 + 'px');
+            $('.proj2').css('left', e.pageX - 250 + 'px');
+        });
+        $(document).mousemove(function(e){
+            $('.proj3').css('top', e.pageY - 250 + 'px');
+            $('.proj3').css('left', e.pageX - 250 + 'px');
+        });
+        $(document).mousemove(function(e){
+            $('.proj4').css('top', e.pageY - 250 + 'px');
+            $('.proj4').css('left', e.pageX - 250 + 'px');
+        });
+        $(document).mousemove(function(e){
+            $('.about').css('left', e.pageX / 50 + 'px');
+            $('.me').css('right', e.pageX * 2 / 50 + 'px');
+        });
+    }());
+  </script>
 </body>
 </html>

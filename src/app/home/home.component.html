@@ -1,0 +1,77 @@
+<app-header></app-header>
+<main>
+    <div class="inner">
+        <div class="col-left">
+            Ich gestalte
+            <div class="scroll-text">
+                <ul>
+                    <li>Scrollen</li>
+                    <li>Scrollen</li>
+                </ul>
+            </div>
+        </div>
+        <h1>
+            Websites
+            <br />
+            Apps/UI
+            <br />
+            UX Design
+            <img class="smiley" src="./assets/img/smiley.png" alt="" />
+        </h1>
+        <div class="copy">Loukas &copy; 2021</div>
+        <img class="arrow-down" src="./assets/img/arrow-down.png" alt="" />
+        <div class="projects">
+            <div class="project">
+                <a class="trigger1" (mouseover)="appear(1)" (mouseout)="disappear(1)" href="https://beewaxx.com/"><h2>Beewaxx Social App</h2></a>
+                <div class="sub">
+                    Branding + Webdesign und Entwicklung
+                    <div class="year">2019</div>
+                </div>
+            </div>
+            <div class="project">
+                <a class="trigger2" (mouseover)="appear(2)" (mouseout)="disappear(2)" href="http://chairdesign.org//"><h2>Chairdesign.org</h2></a>
+                <div class="sub">
+                    Branding + Webdesign und Entwicklung
+                    <div class="year">2020</div>
+                </div>
+            </div>
+            <div class="project">
+                <a class="trigger3" (mouseover)="appear(3)" (mouseout)="disappear(3)" href="https://anastasiou.io/sasha/"><h2>The McTavish Regressions</h2></a>
+                <div class="sub">
+                    Branding + Webdesign und Entwicklung
+                    <div class="year">2019</div>
+                </div>
+            </div>
+            <div class="project">
+                <a class="trigger4" (mouseover)="appear(4)" (mouseout)="disappear(4)" href="http://www.ironheaddigital.de/"><h2>Ironhead Digital</h2></a>
+                <div class="sub">
+                    Branding + Webdesign und Entwicklung
+                    <div class="year">2018</div>
+                </div>
+            </div>
+        </div>
+        <h2 class="awards">Digital<br />awards</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jahr</th>
+                    <th>Anbieter</th>
+                    <th colspan="2">Titel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let award of awards">
+                    <td>{{ award.year }}</td>
+                    <td>{{ award.provider }}</td>
+                    <td>{{ award.title }}</td>
+                    <td><a [href]="award.url" target="_blank"><img src="./assets/img/link.png" alt="" /></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+<div class="proj1"></div>
+<div class="proj2"></div>
+<div class="proj3"></div>
+<div class="proj4"></div>
+<app-footer></app-footer>
